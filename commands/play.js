@@ -16,6 +16,7 @@ module.exports = {
                 let dispatcher = connection.play(ytdl(args[1], { quality: "highestaudio"}));
 
                 dispatcher.on("finish", () => {
+                    message.reply('Je joue actuellement la musique.')
                     dispatcher.destroy();
                 });
 
