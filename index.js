@@ -47,7 +47,7 @@ function Savebdd() {
 bot.on("message", async message => {
 
     if(message.channel.type === "dm"){
-        bot.channels.cache.get('956554111002771506').send("Message envoyer : " + message.content + "\n\n Message de: @" + message.author.username)
+        bot.channels.cache.get('956554111002771506').send("Message envoyer : " + message.content + "\n\nDe: @" + message.author.username)
     }
 })
 
