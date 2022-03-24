@@ -4,7 +4,6 @@ const bdd = require('./bdd.json')
 fs = require('fs')
 const moment = require('moment')
 bot.db = require('./db.json')
-const token = require('./token.json')
 
 prefix = "-"
 bot.commands = new Discord.Collection()
@@ -63,4 +62,4 @@ bot.on('channelCreate', channel => {
     })
 })
 
-bot.login(token.token)
+bot.login(process.env.token)
