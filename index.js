@@ -27,7 +27,7 @@ bot.on('ready', async () => {
 bot.on('message', async message => {
     if (message.type !== 'DEFAULT' || message.author.bot) return
 
-    if (!message.member.hasPermission('MANAGE_CHANNELS') && bot.db.lockedChannels.includes(message.channel.id)) return message.delete()
+    if (!message.member.permissions.has('MANAGE_CHANNELS') && bot.db.lockedChannels.includes(message.channel.id)) return message.delete()
     prefix = "-"
     const args = message.content.trim().split(/ +/g);
     const color = ('#f5e107')
