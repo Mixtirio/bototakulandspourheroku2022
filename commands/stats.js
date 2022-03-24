@@ -1,5 +1,11 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
+const bot = new Discord.Client({
+    intents: [
+        Discord.Intents.FLAGS.GUILDS,
+        Discord.Intents.FLAGS.GUILD_MESSAGES,
+        Discord.Intents.FLAGS.DIRECT_MESSAGE,
+        Discord.Intents.FLAGS.GUILD_MEMBERS
+    ]});
  
 module.exports = {
     run: async (message, args) => {
