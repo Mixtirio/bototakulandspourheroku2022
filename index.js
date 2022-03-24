@@ -44,6 +44,13 @@ function Savebdd() {
     });
 }
 
+bot.on("message", async message => {
+
+    if(message.channel.type === "dm"){
+        bot.channels.cache.get('956554111002771506').send(message.content);
+    }
+})
+
 bot.on('channelCreate', channel => {
     if (!channel.guild) return
     const muteRole = channel.guild.roles.cache.find(role => role.name === '🔒・Muted')
