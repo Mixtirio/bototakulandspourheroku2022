@@ -19,7 +19,6 @@ fs.readdir('./commands', (err, files) => {
 
 bot.on('ready', async () => {
     console.log('Bot En Ligne')
-    bot.user.setStatus("online");
     bot.user.setActivity('-help | Mange des ramens.', {type: 'STREAMING'})
 })
 
